@@ -1,25 +1,50 @@
+:root {
+  --minion-yellow: #F5E050;
+}
+
 body {
-  background-color: #F5E050;
-  display: grid;
+  background-color: var(--minion-yellow);
 }
 
 main {
-  grid-template: 15% 15% 40% 30% / 15% auto 15%;
+  grid-template: repeat(auto-fit, 25%) / 15% auto 15%;
   display: grid;
 }
 
 header {
-  display: grid;
+  grid-row-start: 1;
   grid-column-start: 2;
   border: 1px solid black;
+  font-size: 3vh;
+  text-align: center;
+  margin: 3vh 0 3vh 0;
 }
 
-h1 {
+nav {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  display: flex;
   border: 1px solid black;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  font-family: helvetica;
+  font-size: 2vh;
+  border: 1px solid black;
+  border-radius: 3vh;
+  padding: 1em 2em 1em 2em;
+  text-align: center;
+  width: 5rem;
 }
 
 footer {
-  grid-row-start: 3;
+  grid-row-start: 4;
   grid-column-start: 2;
   bottom: 0;
   border: 1px solid black;
