@@ -1,0 +1,26 @@
+body {
+  background-color: #F5E050;
+  display: grid;
+}
+
+main {
+  grid-template: 15% 15% 40% 30% / 15% auto 15%;
+  display: grid;
+}
+
+header {
+  display: grid;
+  grid-column-start: 2;
+  border: 1px solid black;
+}
+
+h1 {
+  border: 1px solid black;
+}
+
+footer {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  bottom: 0;
+  border: 1px solid black;
+}
