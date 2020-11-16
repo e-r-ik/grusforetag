@@ -14,15 +14,16 @@ body {
 }
 
 main {
-  grid-template: repeat(auto-fit, 25%) / 15% auto 15%;
+  grid-template: repeat(auto-fit, 16.67%) / 15% auto 15%;
   display: grid;
 }
 
 header {
   grid-row-start: 1;
   grid-column-start: 2;
-  border: 1px solid black;
-  font-size: 3vh;
+  font-size: 3vw;
+  font-family: helvetica;
+  font-weight: bold;
   text-align: center;
   margin: 3vh 0 3vh 0;
 }
@@ -31,7 +32,6 @@ nav {
   grid-row-start: 2;
   grid-column-start: 2;
   display: flex;
-  border: 1px solid black;
   flex: 1;
   justify-content: space-evenly;
 }
@@ -39,32 +39,43 @@ nav {
 .navButton {
   text-decoration: none;
   color: #000000;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
   font-family: helvetica;
-  font-size: 2vh;
-  border-radius: 3vh;
-  padding: 1em 2em 1em 2em;
-  text-align: center;
-  width: 5rem;
+  font-size: 2vw;
+  font-weight: bold;
+  border-radius: 3vw;
+  padding: 1.5vw 3vw 1.5vw 3vw;
+  /*text-align: center;*/
+  width: 5vw;
   transition: 0.4s;
 }
 
-.Navbutton:hover {
+.navButton:hover {
   background-color: var(--black);
   color: var(--minion-yellow);
   transition: 0.4s;
 }
 
-footer {
-  grid-row-start: 4;
+[data-component="slideshow"] .slide {
+  display: none;
+}
+
+[data-component="slideshow"] .slide.active {
+  display: block;
+}
+
+#slideshow {
+  grid-row-start: 3;
   grid-column-start: 2;
-  bottom: 0;
-  border: 1px solid black;
+}
+
+.slidepic {
+  width: 75em;
 }
 
 .categoryHighlight {
-  grid-row-start: 3;
+  grid-row-start: 4;
   grid-column-start: 2;
   display: flex;
   justify-content: space-evenly;
@@ -88,11 +99,40 @@ footer {
   display: block;
   text-decoration: none;
   font-family: helvetica;
+  line-height: 4vw;
   border: 1px solid black;
   color: var(--white);
   width: 80%;
-  font-size: 1rem;
+  font-size: 1vw;
   background-color: var(--black);
-  padding-top: 0.5vh;
-  padding-bottom: 0.5vh;
+  height: 4vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+
+.articleDivider {
+  grid-row-start: 5;
+  grid-column-start: 2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.aboutHeader {
+  font-style: italic;
+}
+
+.about {
+  flex: 1;
+}
+
+.ideas {
+  flex: 1;
+}
+
+footer {
+  grid-row-start: 6;
+  grid-column-start: 2;
+  bottom: 0;
+  border: 1px solid black;
 }
