@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -14,7 +15,7 @@ body {
 }
 
 main {
-  grid-template: repeat(auto-fit, 16.67%) / 15% auto 15%;
+  grid-template: repeat(auto-fit, 14.28%) / 15% auto 15%;
   display: grid;
 }
 
@@ -46,8 +47,8 @@ nav {
   font-weight: bold;
   border-radius: 3vw;
   padding: 1.5vw 3vw 1.5vw 3vw;
-  /*text-align: center;*/
-  width: 5vw;
+  text-align: center;
+  width: 15vw;
   transition: 0.4s;
 }
 
@@ -57,42 +58,80 @@ nav {
   transition: 0.4s;
 }
 
-[data-component="slideshow"] .slide {
+.slideshow-container {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
+.mySlides {
   display: none;
 }
 
-[data-component="slideshow"] .slide.active {
+.slidepic {
+  width: 70vw;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+  font-size: 1.5vw;
+  font-family: helvetica;
+  height: 6vw;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: none;
+}
+
+.mySlides:hover .text {
   display: block;
 }
 
-#slideshow {
-  grid-row-start: 3;
-  grid-column-start: 2;
-}
-
-.slidepic {
-  width: 75em;
-}
-
 .categoryHighlight {
-  grid-row-start: 4;
+  grid-row-start: 5;
   grid-column-start: 2;
   display: flex;
-  justify-content: space-evenly;
-  margin: 1vh 0 1vh 0;
+  justify-content: space-around;
 }
 
 .highlightimg {
   width: 80%;
   display: block;
-  border: 1px solid black;
 }
 
 .highlightCategory {
   display: flex;
   flex-wrap: wrap;
-  font-size: 0;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding-right: auto;
 }
 
 .captionText {
@@ -111,11 +150,12 @@ nav {
 }
 
 .articleDivider {
-  grid-row-start: 5;
+  grid-row-start: 6;
   grid-column-start: 2;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  font-family: helvetica;
 }
 
 .aboutHeader {
@@ -124,14 +164,22 @@ nav {
 
 .about {
   flex: 1;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .ideas {
   flex: 1;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 footer {
-  grid-row-start: 6;
+  grid-row-start: 7;
   grid-column-start: 2;
   bottom: 0;
   border: 1px solid black;
