@@ -13,45 +13,45 @@ var drucar = {name: "drucar", price: "69$", picurl: "drucar.png", href: "drucar.
 var hitsquad1 = {name: "hitsquad1", price: "69$", picurl: "hitsquad.png"};
 
 var all = [freezegun, shrinkray, fartgun, tranquilizerdarts,
-           zapplistick, piranhagun, grumobile, gruairship, scooter, drucar];
+           zapplistick, piranhagun, grumobile, gruairship, scooter, drucar, hitsquad1];
 var weapons = [freezegun, shrinkray, fartgun, tranquilizerdarts, zapplistick, piranhagun];
 var vehicles = [grumobile, gruairship, scooter, drucar];
 var hitsquads = [hitsquad1];
 
 function showAll() {
   for (var i = 0; i < all.length; i++) {
-    var a = document.createElement("a");
+    var anchor = document.createElement("a");
     var pname = document.createElement("p");
     var pprice = document.createElement("p");
-    var b = document.getElementsByClassName("productList");
+    var productList = document.getElementById("asdf");
     var textnodepname = document.createTextNode(all[i].name);
     var textnodepprice = document.createTextNode(all[i].price);
-    var ahref = document.createAttribute("href");
-    var aclass = document.createAttribute("class");
+    var anchorhref = document.createAttribute("href");
+    var anchorclass = document.createAttribute("class");
     var pnameclass = document.createAttribute("class");
     var ppriceclass = document.createAttribute("class");
 
-    a.appendChild(pname);
-    a.appendChild(pprice);
-    a.setAttributeNode(ahref);
-    a.setAttributeNode(aclass);
+    anchor.appendChild(pname);
+    anchor.appendChild(pprice);
+    anchor.setAttributeNode(anchorhref);
+    anchor.setAttributeNode(anchorclass);
 
-    ahref.value = all[i].href;
-    aclass.value = "productitem";
+    anchorhref.value = all[i].href;
+    anchorclass.value = "productitem";
 
     pname.appendChild(textnodepname);
     pname.setAttributeNode(pnameclass);
 
-    pnameclass.value = "";
+    pnameclass.value = "asdf";
 
     pprice.appendChild(textnodepprice);
     pprice.setAttributeNode(ppriceclass);
 
-    ppriceclass.value = "";
+    ppriceclass.value = "asdf";
 
 
 
-    b.appendChild(a);
+    document.getElementById("asdf").appendChild(anchor);
   }
 }
 
