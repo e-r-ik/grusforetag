@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: helvetica;
 }
 
 :root {
@@ -14,9 +15,34 @@ body {
   background-color: var(--minion-yellow);
 }
 
-main {
+.joinuspage {
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+
+#mainid {
   grid-template: repeat(auto-fit, 14.28%) / 15% auto 15%;
   display: grid;
+}
+
+#productsid {
+  grid-template: repeat(auto-fit, 25%) / 15% auto 15%;
+  display: grid;
+}
+
+#jobsid {
+  grid-template: repeat(auto-fit, 33%) / 15% auto 15%;
+  display: grid;
+}
+
+#joinusid {
+  grid-template: repeat(auto-fit, 33%) / 15% auto 15%;
+  display: grid;
+}
+
+.email {
+  display: flex;
+  flex-direction: row;
 }
 
 header {
@@ -26,7 +52,7 @@ header {
   font-family: helvetica;
   font-weight: bold;
   text-align: center;
-  margin: 3vh 0 3vh 0;
+  margin: 3vw 0 3vw 0;
 }
 
 nav {
@@ -55,6 +81,61 @@ nav {
 .navButton:hover {
   background-color: var(--black);
   color: var(--minion-yellow);
+  transition: 0.4s;
+}
+
+#joboffers {
+  display: flex;
+  grid-row-start: 3;
+  grid-column-start: 2;
+}
+
+#joboffernav {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#jobofferslist {
+  flex: 3;
+}
+
+.jobcategories {
+  text-decoration: none;
+  color: black;
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+}
+
+.jobofferthing {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  text-decoration: none;
+  color: black;
+}
+
+.jobofferthing:hover {
+  background-color: black;
+  color: var(--minion-yellow);
+  transition: 0.4s;
+}
+
+.applybutton {
+  text-decoration: none;
+  color: black;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.jobofferthing:hover .applybutton {
+  color: var(--minion-yellow);
+}
+
+.applybutton:hover {
+  background-color: white;
   transition: 0.4s;
 }
 
