@@ -10,7 +10,7 @@ var gruairship = {name: "gruairship", price: "69$", picurl: "gruairship.png", hr
 var scooter = {name: "scooter", price: "69$", picurl: "scooter.png", href: "scooter.html"};
 var drucar = {name: "drucar", price: "69$", picurl: "drucar.png", href: "drucar.html"};
 
-var hitsquad1 = {name: "hitsquad1", price: "69$", picurl: "hitsquad.png"};
+var hitsquad1 = {name: "hitsquad1", price: "69$", picurl: "hitsquad.png", href: "hitsquad.html"};
 
 var all = [freezegun, shrinkray, fartgun, tranquilizerdarts,
            zapplistick, piranhagun, grumobile, gruairship, scooter, drucar, hitsquad1];
@@ -18,14 +18,20 @@ var weapons = [freezegun, shrinkray, fartgun, tranquilizerdarts, zapplistick, pi
 var vehicles = [grumobile, gruairship, scooter, drucar];
 var hitsquads = [hitsquad1];
 
-function showAll() {
-  for (var i = 0; i < all.length; i++) {
+function loadItems(n) {
+
+  var productList = document.getElementById("productList");
+  while(productList.firstChild) {
+    productList.removeChild(productList.firstChild);
+  }
+
+  for (var i = 0; i < n.length; i++) {
     var anchor = document.createElement("a");
     var pname = document.createElement("p");
     var pprice = document.createElement("p");
-    var productList = document.getElementById("asdf");
-    var textnodepname = document.createTextNode(all[i].name);
-    var textnodepprice = document.createTextNode(all[i].price);
+
+    var textnodepname = document.createTextNode(n[i].name);
+    var textnodepprice = document.createTextNode(n[i].price);
     var anchorhref = document.createAttribute("href");
     var anchorclass = document.createAttribute("class");
     var pnameclass = document.createAttribute("class");
@@ -36,23 +42,23 @@ function showAll() {
     anchor.setAttributeNode(anchorhref);
     anchor.setAttributeNode(anchorclass);
 
-    anchorhref.value = all[i].href;
+    anchorhref.value = n[i].href;
     anchorclass.value = "productitem";
 
     pname.appendChild(textnodepname);
     pname.setAttributeNode(pnameclass);
 
-    pnameclass.value = "sdfg";
+    pnameclass.value = "productitemname";
 
     pprice.appendChild(textnodepprice);
     pprice.setAttributeNode(ppriceclass);
 
-    ppriceclass.value = "dfgh";
+    ppriceclass.value = "productitemprice";
 
 
 
-    document.getElementById("asdf").appendChild(anchor);
+    productList.appendChild(anchor);
   }
 }
 
-showAll();
+loadItems(all);
