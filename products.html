@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>grusforetag</title>
-    <link rel="stylesheet" href="master.css">
     <link rel="stylesheet" href="products.css">
-    <async defer script src="products.js" charset="utf-8"></script>
+    <script async defer src="products.js" charset="utf-8"></script>
   </head>
   <body>
 
@@ -14,7 +13,7 @@
         Evil Corp
       </header>
 
-      <nav>
+      <nav class="mainnav">
         <a href="index.html" class="navButton">Home</a>
         <a href="products.html" class="navButton">Services</a>
         <a href="jobs.html" class="navButton">Jobs</a>
@@ -24,12 +23,12 @@
       <section class="productcontainer" style="margin-top: 3vw;">
 
         <nav class="sideNav">
-          <button class="sideNavButton">Weapons</button>
-          <button class="sideNavButton">Transportation</button>
-          <button class="sideNavButton">Hitsquads</button>
+          <button class="sideNavButton" onclick="loadItems(weapons)">Weapons</button>
+          <button class="sideNavButton" onclick="loadItems(vehicles)">Transportation</button>
+          <button class="sideNavButton" onclick="loadItems(hitsquads)">Hitsquads</button>
         </nav>
 
-        <div id="asdf">
+        <div id="productList">
 
         </div>
       </section>
