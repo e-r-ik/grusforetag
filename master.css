@@ -248,6 +248,7 @@ nav {
   padding-bottom: 3vw;
   padding-left: 1vw;
   padding-right: 1vw;
+  font-size: 1vw;
 }
 
 .ideas {
@@ -256,6 +257,7 @@ nav {
   padding-bottom: 3vw;
   padding-left: 1vw;
   padding-right: 1vw;
+  font-size: 1vw;
 }
 
 footer {
@@ -263,4 +265,5 @@ footer {
   grid-column-start: 2;
   bottom: 0;
   border: 1px solid black;
+  font-size: 1vw;
 }
