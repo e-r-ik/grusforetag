@@ -79,10 +79,12 @@ header {
 .productitemname {
   padding-left: 1vw;
   margin-right: auto;
+  font-size: 1vw;
 }
 
 .productitemprice {
   padding-right: 1vw;
+  font-size: 1vw;
 }
 
 .productitem:hover {
