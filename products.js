@@ -42,12 +42,12 @@ function showAll() {
     pname.appendChild(textnodepname);
     pname.setAttributeNode(pnameclass);
 
-    pnameclass.value = "asdf";
+    pnameclass.value = "sdfg";
 
     pprice.appendChild(textnodepprice);
     pprice.setAttributeNode(ppriceclass);
 
-    ppriceclass.value = "asdf";
+    ppriceclass.value = "dfgh";
 
 
 
